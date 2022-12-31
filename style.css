@@ -1,0 +1,91 @@
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.container{
+  position: relative;
+  width: 100vw;
+  height: 100vh;
+  background-image: url('images/pexels-laura-james-6102095.jpg');
+  background-position: center;
+  background-size: cover;
+  padding: 0 8%;
+}
+
+body{
+  font-family: 'Montserrat', sans-serif;
+}
+
+.logo{
+  width: 120px;
+  cursor: pointer;
+  padding: 20px;
+}
+
+.content{
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  color: #fff;
+  z-index: 10000;
+}
+
+.content h1{
+  font-size: 64px;
+  animation:  color-change 4s linear infinite;
+}
+@keyframes color-change {
+  0%{color: white;}
+  50%{color: yellow;}
+  100%{color: blue;}
+}
+
+.span{
+  color: #fff;
+}
+
+.knock{
+  color: white;
+  font-size: 30px;
+}
+
+.launch-time{
+  display: flex;
+}
+
+.launch-time div{
+  flex-basis: 100px;
+}
+
+.launch-time div p{
+  font-size: 60px;
+}
+
+.rocket{
+  width: 250px;
+  position: absolute;
+  right: 10%;
+  bottom: 0;
+  animation: rocket 4s linear infinite;
+  z-index: 100;
+}
+
+@keyframes rocket {
+  0%{
+    bottom: 0;
+  }
+  50%{
+    bottom: 50%;
+  }
+  100%{
+    bottom: 100%;
+  }
+}
+
+@media (max-width:768px){
+  .rocket{
+    display: none;
+  }
+}
